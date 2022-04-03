@@ -1,0 +1,102 @@
+[
+    {
+        "code": "USD",
+        "name": "amerikan-dolari",
+        "fullname": "Amerikan Doları"
+    },
+    {
+        "code": "EUR",
+        "name": "euro",
+        "fullname": "Euro"
+    },
+    {
+        "code": "GBP",
+        "name": "sterlin",
+        "fullname": "İngiliz Sterlini"
+    },
+    {
+        "code": "CHF",
+        "name": "isvicre-frangi",
+        "fullname": "İsviçre Frangı"
+    },
+    {
+        "code": "CAD",
+        "name": "kanada-dolari",
+        "fullname": "Kanada Doları"
+    },
+    {
+        "code": "RUB",
+        "name": "rus-rublesi",
+        "fullname": "Rus Rublesi"
+    },
+    {
+        "code": "AED",
+        "name": "birlesik-arap-emirlikleri-dirhemi",
+        "fullname": "B.A.E. Dirhemi"
+    },
+    {
+        "code": "AUD",
+        "name": "avustralya-dolari",
+        "fullname": "Avustralya Doları"
+    },
+    {
+        "code": "DKK",
+        "name": "danimarka-kronu",
+        "fullname": "Danimarka Kronu"
+    },
+    {
+        "code": "SEK",
+        "name": "isvec-kronu",
+        "fullname": "İsveç Kronu"
+    },
+    {
+        "code": "NOK",
+        "name": "norvec-kronu",
+        "fullname": "Norveç Kronu"
+    },
+    {
+        "code": "JPY",
+        "name": "japon-yeni",
+        "fullname": "100 Japon Yeni"
+    },
+    {
+        "code": "KWD",
+        "name": "kuveyt-dinari",
+        "fullname": "Kuveyt Dinarı"
+    },
+    {
+        "code": "IRR",
+        "name": "iran-riyali",
+        "fullname": "İran Riyali"
+    },
+    {
+        "code": "RON",
+        "name": "romen-leyi",
+        "fullname": "Romanya Leyi"
+    },
+    {
+        "code": "CNY",
+        "name": "cin-yuani",
+        "fullname": "Çin Yuanı"
+    },
+    {
+        "code": "AZN",
+        "name": "azerbaycan-manati",
+        "fullname": "Azerbaycan Manatı"
+    },
+    {
+        "code": "KRW",
+        "name": "guney-kore-wonu",
+        "fullname": "Güney Kore Wonu"
+    },
+    {
+        "code": "PKR",
+        "name": "pakistan-rupisi",
+        "fullname": "Pakistan Rupisi"
+    },
+    {
+        "code": "QAR",
+        "name": "katar-riyali",
+        "fullname": "Katar Riyali"
+    }
+]
