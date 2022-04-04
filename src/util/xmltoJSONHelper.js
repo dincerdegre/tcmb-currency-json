@@ -4,8 +4,8 @@ const xml = require("xml2js").parseString;
 const xmltoJsonData = async (xmlUrl) => {
   let result = [];
   // Enter a XML URL
-  const response = await fetch(xmlUrl);
   try {
+    const response = await fetch(xmlUrl);
     if (response.ok) {
       const text = await response.text();
       xml(text, (error, output) => {

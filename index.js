@@ -19,7 +19,7 @@ app.use(function (req, res, next) {
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.status(200).json({ message: "Welcome to DincerDegre  TCMB JSON API" });
+  res.status(200).json({ message: "Welcome to TCMB JSON API" });
 });
 
 app.use("/api", apiRouter);
