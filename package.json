@@ -4,7 +4,8 @@
   "description": "Türkiye Cumhuriyeti Merkez Bankası'ndan XML olarak gelen günlük Döviz Verisini JSON olarak çevirip kullanıcıya dönen API",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "start": "node app.js"
   },
   "author": "Dinçer Değre",
   "license": "ISC",

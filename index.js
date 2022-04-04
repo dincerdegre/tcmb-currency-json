@@ -6,6 +6,7 @@ const apiRouter = require("./src/routers/apiRouter");
 const rateLimit = require("express-rate-limit");
 const app = express();
 
+app.set('trust proxy', 1);
 const limiter = rateLimit({
   windowMs: 24 * 60 * 60 * 1000,
   max: 100,
@@ -18,6 +19,7 @@ const limiter = rateLimit({
 });
 
 app.use(limiter);
+
 app.use(express.json());
 
 app.use(function (req, res, next) {
