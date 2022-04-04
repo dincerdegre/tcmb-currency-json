@@ -3,7 +3,6 @@ require("dotenv").config();
 const cors = require("cors");
 const errorMiddleware = require("./src/middlewares/errorMiddleware");
 const apiRouter = require("./src/routers/apiRouter");
-
 const app = express();
 
 app.use(express.json());
@@ -19,13 +18,14 @@ app.use(function (req, res, next) {
 
 app.use(cors());
 
-app.get("/api", apiRouter);
-
 app.get("/", (req, res) => {
-    res.status(200).json({ message: "Welcome to DincerDegre TCMB JSON API" });
-  });
+  res.status(200).json({ message: "Welcome to TCMB JSON API" });
+});
+
+app.use("/api", apiRouter);
 
 app.use(errorMiddleware);
-app.listen(process.env.PORT, () => { // PORT = 3000
-  console.log("listening on port "+process.env.PORT);
+app.listen(process.env.PORT, () => {
+  // PORT = 3000
+  console.log("listening on port " + process.env.PORT);
 });

@@ -1,0 +1,102 @@
+{
+    "USD" : {
+        "code": "USD",
+        "name": "amerikan-dolari",
+        "fullname": "Amerikan Doları"
+    },
+    "EUR": {
+        "code": "EUR",
+        "name": "euro",
+        "fullname": "Euro"
+    },
+    "GBP":{
+        "code": "GBP",
+        "name": "sterlin",
+        "fullname": "İngiliz Sterlini"
+    },
+    "CHF":{
+        "code": "CHF",
+        "name": "isvicre-frangi",
+        "fullname": "İsviçre Frangı"
+    },
+    "CAD":{
+        "code": "CAD",
+        "name": "kanada-dolari",
+        "fullname": "Kanada Doları"
+    },
+    "RUB":{
+        "code": "RUB",
+        "name": "rus-rublesi",
+        "fullname": "Rus Rublesi"
+    },
+    "AED":{
+        "code": "AED",
+        "name": "birlesik-arap-emirlikleri-dirhemi",
+        "fullname": "B.A.E. Dirhemi"
+    },
+    "AUD":{
+        "code": "AUD",
+        "name": "avustralya-dolari",
+        "fullname": "Avustralya Doları"
+    },
+    "DKK":{
+        "code": "DKK",
+        "name": "danimarka-kronu",
+        "fullname": "Danimarka Kronu"
+    },
+    "SEK":{
+        "code": "SEK",
+        "name": "isvec-kronu",
+        "fullname": "İsveç Kronu"
+    },
+    "NOK":{
+        "code": "NOK",
+        "name": "norvec-kronu",
+        "fullname": "Norveç Kronu"
+    },
+    "JPY":{
+        "code": "JPY",
+        "name": "japon-yeni",
+        "fullname": "100 Japon Yeni"
+    },
+    "KWD":{
+        "code": "KWD",
+        "name": "kuveyt-dinari",
+        "fullname": "Kuveyt Dinarı"
+    },
+    "IRR":{
+        "code": "IRR",
+        "name": "iran-riyali",
+        "fullname": "İran Riyali"
+    },
+    "RON":{
+        "code": "RON",
+        "name": "romen-leyi",
+        "fullname": "Romanya Leyi"
+    },
+    "CNY":{
+        "code": "CNY",
+        "name": "cin-yuani",
+        "fullname": "Çin Yuanı"
+    },
+    "AZN":{
+        "code": "AZN",
+        "name": "azerbaycan-manati",
+        "fullname": "Azerbaycan Manatı"
+    },
+    "KRW":{
+        "code": "KRW",
+        "name": "guney-kore-wonu",
+        "fullname": "Güney Kore Wonu"
+    },
+    "PKR":{
+        "code": "PKR",
+        "name": "pakistan-rupisi",
+        "fullname": "Pakistan Rupisi"
+    },
+    "QAR":{
+        "code": "QAR",
+        "name": "katar-riyali",
+        "fullname": "Katar Riyali"
+    }
+}
