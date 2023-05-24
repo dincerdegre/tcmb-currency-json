@@ -14,7 +14,12 @@
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "express-rate-limit": "^6.3.0",
+    "https": "^1.0.0",
     "node-fetch": "^2.6.7",
-    "xml2js": "^0.4.23"
+    "swagger-ui-express": "^4.6.3",
+    "xml2js": "^0.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
   }
 }
