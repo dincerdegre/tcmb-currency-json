@@ -7,14 +7,14 @@ const currencies = async (req, res, next) => {
     const jsonData = await xmltoJsonData(xmlUrl);
     const jsonArray = JSON.parse(jsonData);
     console.log(jsonArray);
-    const result = {};
+    const result = [];
     for (let index = 0; index < jsonArray.Tarih_Date.Currency.length; index++) {
       currencySymbol = jsonArray.Tarih_Date.Currency[index].$.Kod;
       if (currencySymbol === "XDR") {
         continue;
       }
       currencyName = getName(currencySymbol);
-      result[currencySymbol] = currencyName;
+      result.push({"code": currencySymbol, "name":currencyName})
     }
     // For Loop ile isimleri verilecek
     res.status(200).json(result);
