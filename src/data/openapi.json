@@ -1,0 +1,215 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "TCMB Currency JSON API - OpenAPI 3.0",
+    "description": "Get Exchange Rates announced by the Central Bank of the Republic of Turkey in JSON format",
+    "contact": {
+      "email": "info@dincerdegre.com"
+    },
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "tags": [
+    {
+      "name": "api",
+      "description": "TCMB Json Api"
+    }
+  ],
+  "paths": {
+    "/api/currencies": {
+      "get": {
+        "tags": [
+          "api"
+        ],
+        "summary": "Fetch All Currency Symbol and Names",
+        "description": "Fetch All Currency Symbol and Names",
+        "operationId": "getCurrencies",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Currency"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "errorMessage": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/latestprices": {
+      "get": {
+        "tags": [
+          "api"
+        ],
+        "summary": "Fetch All Currencies Buy and Sell Prices",
+        "description": "Fetch All Currencies Buy and Sell Prices",
+        "operationId": "getLatestPrices",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CurrencyResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "errorMessage": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/latestprice/{code}": {
+      "get": {
+        "tags": [
+          "api"
+        ],
+        "summary": "Find Currency price by CODE",
+        "description": "For valid response try Currency Codes. Other values will generate exceptions.",
+        "operationId": "getOrderById",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CurrencyConversion"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "errorMessage": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "code",
+            "in": "path",
+            "description": "Valid Currency Code",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Currency": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "CurrencyResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "string"
+          },
+          "Date": {
+            "type": "string"
+          },
+          "base": {
+            "type": "string"
+          },
+          "rates": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CurrencyRate"
+            }
+          }
+        }
+      },
+      "CurrencyRate": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "buyPrice": {
+            "type": "string"
+          },
+          "sellPrice": {
+            "type": "string"
+          }
+        }
+      },
+      "CurrencyConversion": {
+        "type": "object",
+        "properties": {
+          "base": {
+            "type": "string"
+          },
+          "to": {
+            "type": "string"
+          },
+          "buyPrice": {
+            "type": "string"
+          },
+          "sellPrice": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
