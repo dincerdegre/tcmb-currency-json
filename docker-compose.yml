@@ -1,0 +1,11 @@
+version: '3'
+services:
+  node:
+    build: 
+      dockerfile: Dockerfile.dev
+      context: ./
+    ports:
+      - ${PORT}:${PORT}  
+    volumes:
+      - /app/node_modules
+      - ./:/app
