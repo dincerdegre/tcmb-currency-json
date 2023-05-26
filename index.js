@@ -5,11 +5,11 @@ const errorMiddleware = require("./src/middlewares/errorMiddleware");
 const apiRouter = require("./src/routers/apiRouter");
 const rateLimit = require("express-rate-limit");
 const app = express();
-// const swaggerUi = require("swagger-ui-express");
-// const swaggerDoc = require("./src/data/swagger.json");
-const port = 3002;
+const swaggerUi = require("swagger-ui-express");
+const openApiDoc = require("./src/data/openapi.json");
+const port = process.env.PORT;
 
-// app.set("trust proxy", 0);
+app.set("trust proxy", 1);
 const limiter = rateLimit({
   windowMs: 24 * 60 * 60 * 1000,
   max: 100,
@@ -39,7 +39,7 @@ app.use(cors());
 app.get("/", (req, res) => {
   console.log(res.getHeader("ratelimit-remaining"));
   res.status(200).json({
-    message: "qqasaqaaWelcome to TCMB JSON API.",
+    message: "Welcome to TCMB JSON API.",
     ratelimit:
       "You have " +
       res.getHeader("ratelimit-remaining") +
@@ -47,7 +47,7 @@ app.get("/", (req, res) => {
   });
 });
 
-// app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerDoc));
+app.use("/docs", swaggerUi.serve, swaggerUi.setup(openApiDoc));
 
 app.use("/api", apiRouter);
 
